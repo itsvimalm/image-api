@@ -9,7 +9,7 @@ form.addEventListener('submit', function(event) {
 });
 
 async function searchImages(query) {
-  const API_KEY = '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';
+  const API_KEY = process.env.API_KEY;
   const url = `https://api.openai.com/v1/images/generations=${query}&client_id=${API_KEY}`;
 
   try {
